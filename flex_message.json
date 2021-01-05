@@ -65,7 +65,7 @@
         "action": {
           "type": "postback",
           "label": "2",
-          "displayText": "2. Publikasi",
+          "displayText": "2",
           "data": "2"
         }
       },
@@ -75,8 +75,8 @@
         "action": {
           "type": "postback",
           "label": "3. Indikator Strategis",
-          "displayText": "3. Indikator Strategis",
-          "data": "3. Indikator Strategis"
+          "displayText": "3",
+          "data": "3"
         }
       },
       {

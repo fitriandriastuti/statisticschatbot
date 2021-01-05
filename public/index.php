@@ -91,21 +91,20 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 //Kembali ke menu utama dengan reply "menu"
 //                                    ';
 //                        $result = $bot->replyText($event['replyToken'], $message);
-                    }elseif($event['message']['text']==1){
+                    }elseif($event['message']['text']=='1. Tabel Statistik'){
                         $result = $bot->replyText($event['replyToken'], 'satu pepo');
-                    }elseif ($event['message']['text']==2){
+                    }elseif ($event['message']['text']=='2. Publikasi'){
                         $result = $bot->replyText($event['replyToken'], 'dua pepo');
-                    }elseif ($event['message']['text']==3){
+                    }elseif ($event['message']['text']=='3. Indikator Strategis'){
                         $result = $bot->replyText($event['replyToken'], 'tiga pepo');
-                    }elseif ($event['message']['text']==4){
+                    }elseif ($event['message']['text']=='4. Infografis'){
                         $result = $bot->replyText($event['replyToken'], 'empat pepo');
-                    }elseif ($event['message']['text']==5){
+                    }elseif ($event['message']['text']=='5. News'){
                         $result = $bot->replyText($event['replyToken'], 'lima pepo');
-                    }elseif ($event['message']['text']==6){
+                    }elseif ($event['message']['text']=='6. Press Release'){
                         $result = $bot->replyText($event['replyToken'], 'enam pepo');
                     }else{
-                        $message = 'Maaf menu yang anda minta "'.$event['message']['text'].'" tidak tersedia atau salah.
-                                    Kembali ke menu utama dengan reply "menu"
+                        $message = 'Maaf menu yang anda minta "'.$event['message']['text'].'" tidak tersedia atau salah. Kembali ke menu utama dengan reply "menu"
                                     ';
                         $result = $bot->replyText($event['replyToken'], $message);
                     }

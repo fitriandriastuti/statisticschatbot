@@ -31,7 +31,7 @@
       },
       {
         "type": "text",
-        "text": "oleh Badan Pusat Statistik Republik Indonesia",
+        "text": "oleh Badan Pusat Statistik RI",
         "size": "sm",
         "color": "#c9302c"
       },
@@ -54,9 +54,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "1. Tabel Statistik",
+          "label": "1",
           "displayText": "1. Tabel Statistik",
-          "data": "1. Tabel Statistik"
+          "data": "1"
         }
       },
       {
@@ -64,9 +64,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "2. Publikasi",
+          "label": "2",
           "displayText": "2. Publikasi",
-          "data": "2. Publikasi"
+          "data": "2"
         }
       },
       {
@@ -74,9 +74,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "3. Indikator Strategis",
+          "label": "3",
           "displayText": "3. Indikator Strategis",
-          "data": "3. Indikator Strategis"
+          "data": "3"
         }
       },
       {
@@ -84,9 +84,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "4. Infografis",
+          "label": "4",
           "displayText": "4. Infografis",
-          "data": "4. Infografis"
+          "data": "4"
         }
       },
       {
@@ -94,9 +94,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "5. News",
+          "label": "5",
           "displayText": "5. News",
-          "data": "5. News"
+          "data": "5"
         }
       },
       {
@@ -104,9 +104,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "6. Press Release",
+          "label": "6",
           "displayText": "6. Press Release",
-          "data": "6. Press Release"
+          "data": "6"
         }
       }
     ]

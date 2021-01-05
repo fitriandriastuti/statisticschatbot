@@ -70,18 +70,6 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
                     #webapi bps
                     #https://webapi.bps.go.id/v1/api/list/model/publication/domain/0000/keyword/neraca/key/0e4e501e990fd55e10da084c8f6087d5/
                     if(strtolower($event['message']['text'])=='menu'){
-                        $message = 'Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik.
-                                    Berikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:
-                                    1. Tabel Statistik
-                                    2. Publication
-                                    3. Strategic Indicator
-                                    4. Infographic
-                                    5. News
-                                    6. Press Release
-                                    Kembali ke menu utama dengan reply "menu"
-                                    ';
-                        $result = $bot->replyText($event['replyToken'], $message);
-                    }elseif($event['message']['text']==1){
                         $flexTemplate = file_get_contents("../flex_message.json"); // template flex message
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
@@ -93,16 +81,28 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
                                 ]
                             ],
                         ]);
+//                        $message = 'Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik. \nBerikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:
+//1. Tabel Statistik
+//2. Publikasi
+//3. Indikator Strategis
+//4. Infografis
+//5. News
+//6. Press Release
+//Kembali ke menu utama dengan reply "menu"
+//                                    ';
+//                        $result = $bot->replyText($event['replyToken'], $message);
+                    }elseif($event['message']['text']==1){
+                        $result = $bot->replyText($event['replyToken'], 'satu pepo');
                     }elseif ($event['message']['text']==2){
-
+                        $result = $bot->replyText($event['replyToken'], 'dua pepo');
                     }elseif ($event['message']['text']==3){
-
+                        $result = $bot->replyText($event['replyToken'], 'tiga pepo');
                     }elseif ($event['message']['text']==4){
-
+                        $result = $bot->replyText($event['replyToken'], 'empat pepo');
                     }elseif ($event['message']['text']==5){
-
+                        $result = $bot->replyText($event['replyToken'], 'lima pepo');
                     }elseif ($event['message']['text']==6){
-
+                        $result = $bot->replyText($event['replyToken'], 'enam pepo');
                     }else{
                         $message = 'Maaf menu yang anda minta "'.$event['message']['text'].'" tidak tersedia atau salah.
                                     Kembali ke menu utama dengan reply "menu"

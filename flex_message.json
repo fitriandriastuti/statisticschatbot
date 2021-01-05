@@ -6,14 +6,14 @@
     "contents": [
       {
         "type": "text",
-        "text": "Dicoding Academy",
+        "text": "Statistics Indonesia",
         "weight": "bold"
       }
     ]
   },
   "hero": {
     "type": "image",
-    "url": "https://www.dicoding.com/images/small/academy/menjadi_android_developer_expert_logo_041217105708.png",
+    "url": "https://statisticschatbot.herokuapp.com/statistik-chatbot.png",
     "size": "full",
     "aspectRatio": "4:3",
     "aspectMode": "cover"
@@ -24,20 +24,20 @@
     "contents": [
       {
         "type": "text",
-        "text": "Menjadi Android Developer Expert",
+        "text": "Data Statistik yang Dipublikasikan ",
         "size": "sm",
         "color": "#c9302c",
         "weight": "bold"
       },
       {
         "type": "text",
-        "text": "oleh: Dicoding Indonesia",
+        "text": "oleh Badan Pusat Statistik Republik Indonesia",
         "size": "sm",
         "color": "#c9302c"
       },
       {
         "type": "text",
-        "text": "Jadilah expert di dunia pemrograman Android. Materi disusun oleh Dicoding sebagai Google Authorized Training Partner.",
+        "text": "Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik. Berikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:",
         "size": "sm",
         "wrap": true,
         "margin": "lg"
@@ -51,12 +51,12 @@
     "contents": [
       {
         "type": "button",
-        "style": "secondary",
+        "style": "primary",
         "action": {
           "type": "postback",
-          "label": "Trial",
-          "displayText": "Trial",
-          "data": "Trial"
+          "label": "1. Tabel Statistik",
+          "displayText": "1. Tabel Statistik",
+          "data": "1"
         }
       },
       {
@@ -64,9 +64,59 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "Daftar",
-          "displayText": "Daftar",
-          "data": "Daftar"
+          "label": "2. Publikasi",
+          "displayText": "2. Publikasi",
+          "data": "2"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "postback",
+          "label": "2. Publikasi",
+          "displayText": "2. Publikasi",
+          "data": "2"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "postback",
+          "label": "3. Indikator Strategis",
+          "displayText": "3. Indikator Strategis",
+          "data": "3"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "postback",
+          "label": "4. Infografis",
+          "displayText": "4. Infografis",
+          "data": "4"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "postback",
+          "label": "5. News",
+          "displayText": "5. News",
+          "data": "5"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "postback",
+          "label": "6. Press Release",
+          "displayText": "6. Press Release",
+          "data": "6"
         }
       }
     ]

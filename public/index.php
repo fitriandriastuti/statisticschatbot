@@ -106,13 +106,13 @@ Kembali ke menu utama dengan reply "menu"
                     }
 
                     elseif(strtolower(substr($event['message']['text'],0,5))=='tabel'){
-                        $keyword = $event['message']['text'];
+                        $keyword = substr($event['message']['text'], strpos($event['message']['text'], "tabel ") + 1);
                         $key_webapibps = '0e4e501e990fd55e10da084c8f6087d5';
                         $json = file_get_contents('https://webapi.bps.go.id/v1/api/list/model/statictable/domain/0000/keyword/'.$keyword.'/key/'.$key_webapibps.'/');
                         $obj = json_decode($json);
                         var_dump($obj);
                         echo $obj->data[0]->title;
-                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$data.' hasilnya: '.$obj->data[0]->title);
+                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$obj.' hasilnya: '.$obj->data[0]->title);
                     }
 
                     else{

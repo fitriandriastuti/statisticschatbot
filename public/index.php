@@ -81,7 +81,7 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 //                                ]
 //                            ],
 //                        ]);
-                        $message = 'Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik. \nBerikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:
+                        $message = 'Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik. Berikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:
 1. Tabel Statistik
 2. Publikasi
 3. Indikator Strategis
@@ -91,19 +91,27 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 Kembali ke menu utama dengan reply "menu"
                                     ';
                         $result = $bot->replyText($event['replyToken'], $message);
-                    }elseif($event['message']['postback']==1){
-                        $result = $bot->replyText($event['replyToken'], 'satu pepo');
+                    }elseif($event['message']['text']==1){
+                        $result = $bot->replyText($event['replyToken'], 'Tabel statistik apa yang Anda cari? *ketik diawali dengan 1_');
                     }elseif ($event['message']['text']==2){
-                        $result = $bot->replyText($event['replyToken'], 'dua pepo');
+                        $result = $bot->replyText($event['replyToken'], 'Publikasi statistik apa yang Anda cari? *ketik diawali dengan 2_');
                     }elseif ($event['message']['text']==3){
-                        $result = $bot->replyText($event['replyToken'], 'tiga pepo');
+                        $result = $bot->replyText($event['replyToken'], 'Indikator strategis apa yang Anda cari? *ketik diawali dengan 3_');
                     }elseif ($event['message']['text']==4){
-                        $result = $bot->replyText($event['replyToken'], 'empat pepo');
+                        $result = $bot->replyText($event['replyToken'], 'Infografis apa yang Anda cari? *ketik diawali dengan 4_');
                     }elseif ($event['message']['text']==5){
-                        $result = $bot->replyText($event['replyToken'], 'lima pepo');
+                        $result = $bot->replyText($event['replyToken'], 'News statistik apa yang Anda cari? *ketik diawali dengan 5_');
                     }elseif ($event['message']['text']==6){
-                        $result = $bot->replyText($event['replyToken'], 'enam pepo');
-                    }else{
+                        $result = $bot->replyText($event['replyToken'], 'Press release statistik apa yang Anda cari? *ketik diawali dengan 6_');
+                    }
+
+                    elseif(substr($event['message']['text'],0,2)=='1_'){
+                        $data = $event['message']['text'];
+                        $message = substr($data, strpos($data, "_") + 1);
+                        $result = $bot->replyText($event['replyToken'], 'hasil dari 1_');
+                    }
+
+                    else{
                         $message = 'Maaf menu yang anda minta "'.$event['message']['text'].'" tidak tersedia atau salah. Kembali ke menu utama dengan reply "menu"
                                     ';
                         $result = $bot->replyText($event['replyToken'], $message);

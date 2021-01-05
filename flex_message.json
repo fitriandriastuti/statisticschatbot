@@ -53,7 +53,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "1. Tabel Statistik",
           "displayText": "1",
           "data": "1"
@@ -63,7 +63,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "2. Publikasi",
           "displayText": "2",
           "data": "2"
@@ -73,7 +73,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "3. Indikator Strategis",
           "displayText": "3",
           "data": "3"
@@ -83,7 +83,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "4. Infografis",
           "displayText": "4. Infografis",
           "data": "4. Infografis"
@@ -93,7 +93,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "5. News",
           "displayText": "5. News",
           "data": "5. News"
@@ -103,7 +103,7 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "text",
+          "type": "postback",
           "label": "6. Press Release",
           "displayText": "6. Press Release",
           "data": "6. Press Release"

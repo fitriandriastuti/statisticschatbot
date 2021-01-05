@@ -91,17 +91,17 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 //Kembali ke menu utama dengan reply "menu"
 //                                    ';
 //                        $result = $bot->replyText($event['replyToken'], $message);
-                    }elseif($event['message']['text']=='1. Tabel Statistik'){
+                    }elseif($event['message']['text']==1){
                         $result = $bot->replyText($event['replyToken'], 'satu pepo');
-                    }elseif ($event['message']['text']=='2. Publikasi'){
+                    }elseif ($event['message']['text']==2){
                         $result = $bot->replyText($event['replyToken'], 'dua pepo');
-                    }elseif ($event['message']['text']=='3. Indikator Strategis'){
+                    }elseif ($event['message']['text']==3){
                         $result = $bot->replyText($event['replyToken'], 'tiga pepo');
-                    }elseif ($event['message']['text']=='4. Infografis'){
+                    }elseif ($event['message']['text']==4){
                         $result = $bot->replyText($event['replyToken'], 'empat pepo');
-                    }elseif ($event['message']['text']=='5. News'){
+                    }elseif ($event['message']['text']==5){
                         $result = $bot->replyText($event['replyToken'], 'lima pepo');
-                    }elseif ($event['message']['text']=='6. Press Release'){
+                    }elseif ($event['message']['text']==6){
                         $result = $bot->replyText($event['replyToken'], 'enam pepo');
                     }else{
                         $message = 'Maaf menu yang anda minta "'.$event['message']['text'].'" tidak tersedia atau salah. Kembali ke menu utama dengan reply "menu"

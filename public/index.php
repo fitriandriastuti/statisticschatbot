@@ -93,6 +93,8 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 //                        $result = $bot->replyText($event['replyToken'], $message);
                     }elseif($event['message']['text']==1){
                         $result = $bot->replyText($event['replyToken'], 'satu pepo');
+                    }elseif($event['message']['text']=='1. Tabel Statistik'){
+                        $result = $bot->replyText($event['replyToken'], '1. Tabel Statistik');
                     }elseif ($event['message']['text']==2){
                         $result = $bot->replyText($event['replyToken'], 'dua pepo');
                     }elseif ($event['message']['text']==3){

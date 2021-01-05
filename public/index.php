@@ -91,7 +91,7 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
 //Kembali ke menu utama dengan reply "menu"
 //                                    ';
 //                        $result = $bot->replyText($event['replyToken'], $message);
-                    }elseif($event['message']['button']==1){
+                    }elseif($event['message']['postback']==1){
                         $result = $bot->replyText($event['replyToken'], 'satu pepo');
                     }elseif($event['message']['text']=='1. Tabel Statistik'){
                         $result = $bot->replyText($event['replyToken'], '1. Tabel Statistik');

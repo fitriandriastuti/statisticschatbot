@@ -67,6 +67,35 @@ $app->post('/webhook', function (Request $request, Response $response) use ($cha
                     //kirim sama text dari chat ditambah keterangan
                     $result = $bot->replyText($event['replyToken'], 'Chat balasan: '.$event['message']['text']);
 
+                    #webapi bps
+                    #https://webapi.bps.go.id/v1/api/list/model/publication/domain/0000/keyword/neraca/key/0e4e501e990fd55e10da084c8f6087d5/
+                    if($event['message']['text']==1){
+                        $flexTemplate = file_get_contents("../flex_message.json"); // template flex message
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+                            ],
+                        ]);
+                    }elseif ($event['message']['text']==2){
+
+                    }elseif ($event['message']['text']==3){
+
+                    }elseif ($event['message']['text']==4){
+
+                    }elseif ($event['message']['text']==5){
+
+                    }elseif ($event['message']['text']==6){
+
+                    }else{
+
+                    }
+
+
                     // or we can use replyMessage() instead to send reply message
                     // $textMessageBuilder = new TextMessageBuilder($event['message']['text']);
                     // $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);

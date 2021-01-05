@@ -114,7 +114,7 @@ Kembali ke menu utama dengan reply "menu"
                         var_dump($obj);
                         echo $url;
 //                        echo $obj->data[0]->title;
-                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.' hasilnya: '.$obj->status);
+                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.' hasilnya: '.$obj->data[0]->title);
                     }
 
                     else{

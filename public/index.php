@@ -111,8 +111,8 @@ Kembali ke menu utama dengan reply "menu"
                         $json = file_get_contents('https://webapi.bps.go.id/v1/api/list/model/statictable/domain/0000/keyword/'.$keyword.'/key/'.$key_webapibps.'/');
                         $obj = json_decode($json);
                         var_dump($obj);
-                        echo $obj->data[0]->title;
-                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$obj.' hasilnya: '.$obj->data[0]->title);
+//                        echo $obj->data[0]->title;
+                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$obj.' hasilnya: ');
                     }
 
                     else{

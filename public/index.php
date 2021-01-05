@@ -103,9 +103,16 @@ Kembali ke menu utama dengan reply "menu"
                         $result = $bot->replyText($event['replyToken'], 'News statistik apa yang Anda cari? *ketik diawali dengan 5_');
                     }elseif ($event['message']['text']==6){
                         $result = $bot->replyText($event['replyToken'], 'Press release statistik apa yang Anda cari? *ketik diawali dengan 6_');
-                    }elseif(strtolower(substr($event['message']['text'],0,5))=='tabel'){
-                        $data = $event['message']['text'];
-                        $result = $bot->replyText($event['replyToken'], 'tabel statistik'.$data);
+                    }
+
+                    elseif(strtolower(substr($event['message']['text'],0,5))=='tabel'){
+                        $keyword = $event['message']['text'];
+                        $key_webapibps = '0e4e501e990fd55e10da084c8f6087d5';
+                        $json = file_get_contents('https://webapi.bps.go.id/v1/api/list/model/statictable/domain/0000/keyword/'.$keyword.'/key/'.$key_webapibps.'/');
+                        $obj = json_decode($json);
+                        var_dump($obj);
+                        echo $obj->data[0]->title;
+                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$data.' hasilnya: '.$obj->data[0]->title);
                     }
 
                     else{

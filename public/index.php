@@ -92,9 +92,9 @@ Kembali ke menu utama dengan reply "menu"
                                     ';
                         $result = $bot->replyText($event['replyToken'], $message);
                     }elseif($event['message']['text']==1){
-                        $result = $bot->replyText($event['replyToken'], 'Tabel statistik apa yang Anda cari? *ketik diawali dengan 1_');
+                        $result = $bot->replyText($event['replyToken'], 'Tabel statistik apa yang Anda cari? *ketik diawali dengan tabel keyword');
                     }elseif ($event['message']['text']==2){
-                        $result = $bot->replyText($event['replyToken'], 'Publikasi statistik apa yang Anda cari? *ketik diawali dengan 2_');
+                        $result = $bot->replyText($event['replyToken'], 'Publikasi statistik apa yang Anda cari? *ketik diawali dengan publikasi keyword');
                     }elseif ($event['message']['text']==3){
                         $result = $bot->replyText($event['replyToken'], 'Indikator strategis apa yang Anda cari? *ketik diawali dengan 3_');
                     }elseif ($event['message']['text']==4){
@@ -103,12 +103,9 @@ Kembali ke menu utama dengan reply "menu"
                         $result = $bot->replyText($event['replyToken'], 'News statistik apa yang Anda cari? *ketik diawali dengan 5_');
                     }elseif ($event['message']['text']==6){
                         $result = $bot->replyText($event['replyToken'], 'Press release statistik apa yang Anda cari? *ketik diawali dengan 6_');
-                    }
-
-                    elseif(substr($event['message']['text'],0,2)=='1_'){
+                    }elseif(strtolower(substr($event['message']['text'],0,5))=='tabel'){
                         $data = $event['message']['text'];
-                        $message = substr($data, strpos($data, "_") + 1);
-                        $result = $bot->replyText($event['replyToken'], 'hasil dari 1_');
+                        $result = $bot->replyText($event['replyToken'], 'tabel statistik'.$data);
                     }
 
                     else{

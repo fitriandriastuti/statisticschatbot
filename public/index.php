@@ -112,7 +112,7 @@ Kembali ke menu utama dengan reply "menu"
                         $obj = json_decode($json);
                         var_dump($obj);
 //                        echo $obj->data[0]->title;
-                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.' hasilnya: '.$obj->status);
+                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.' hasilnya: '.$obj->data[][0]->title);
                     }
 
                     else{

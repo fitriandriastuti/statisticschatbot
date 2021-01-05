@@ -56,7 +56,7 @@
           "type": "postback",
           "label": "1. Tabel Statistik",
           "displayText": "1. Tabel Statistik",
-          "data": "1"
+          "data": "1. Tabel Statistik"
         }
       },
       {
@@ -66,7 +66,7 @@
           "type": "postback",
           "label": "2. Publikasi",
           "displayText": "2. Publikasi",
-          "data": "2"
+          "data": "2. Publikasi"
         }
       },
       {
@@ -76,7 +76,7 @@
           "type": "postback",
           "label": "3. Indikator Strategis",
           "displayText": "3. Indikator Strategis",
-          "data": "3"
+          "data": "3. Indikator Strategis"
         }
       },
       {
@@ -86,7 +86,7 @@
           "type": "postback",
           "label": "4. Infografis",
           "displayText": "4. Infografis",
-          "data": "4"
+          "data": "4. Infografis"
         }
       },
       {
@@ -96,7 +96,7 @@
           "type": "postback",
           "label": "5. News",
           "displayText": "5. News",
-          "data": "5"
+          "data": "5. News"
         }
       },
       {
@@ -106,7 +106,7 @@
           "type": "postback",
           "label": "6. Press Release",
           "displayText": "6. Press Release",
-          "data": "6"
+          "data": "6. Press Release"
         }
       }
     ]

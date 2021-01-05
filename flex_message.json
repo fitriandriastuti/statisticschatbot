@@ -64,9 +64,9 @@
         "style": "primary",
         "action": {
           "type": "postback",
-          "label": "2. Publikasi",
+          "label": "2",
           "displayText": "2. Publikasi",
-          "data": "2. Publikasi"
+          "data": "2"
         }
       },
       {

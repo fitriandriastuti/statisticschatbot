@@ -130,7 +130,7 @@ Kembali ke menu utama dengan reply "menu"
                             ]
                           },
                           "body": {
-                            "type": "box",
+                                                    "type": "box",
                             "layout": "vertical",
                             "contents": [
                               {
@@ -156,6 +156,54 @@ Kembali ke menu utama dengan reply "menu"
                                   "uri": "https://www.bps.go.id/"
                                 }
                               },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "uri",
+                                  "label": "Go",
+                                  "uri": "https://example.com"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "uri",
+                                  "label": "Go",
+                                  "uri": "'.$obj['data'][1][0]['excel'].'"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "4. Infografis",
+                                  "displayText": "4. Infografis",
+                                  "data": "4. Infografis"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "5. News",
+                                  "displayText": "5. News",
+                                  "data": "5. News"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "6. Press Release",
+                                  "displayText": "6. Press Release",
+                                  "data": "6. Press Release"
+                                }
+                              }
                             ]
                           }
                         }  ';

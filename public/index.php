@@ -158,10 +158,9 @@ Kembali ke menu utama dengan reply "menu"
                                   "type": "button",
                                 "style": "primary",
                                 "action": {
-                                  "type": "postback",
-                                  "label": "1. Tabel Statistik",
-                                  "displayText": "1",
-                                  "data": "1"
+                                  "type": "uri",
+                                  "label": "Go",
+                                  "uri": "https://example.com"
                                 }
                               },
                               {

@@ -139,41 +139,6 @@ Kembali ke menu utama dengan reply "menu"
                                 "size": "sm",
                                 "color": "#c9302c",
                                 "weight": "bold"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][1]['title'].'",
-                                "size": "sm",
-                                "color": "#c9302c",
-                                "weight": "bold"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][2]['title'].'",
-                                "size": "sm",
-                                "color": "#c9302c",
-                                "weight": "bold"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][3]['title'].'",
-                                "size": "sm",
-                                "color": "#c9302c",
-                                "weight": "bold"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][4]['title'].'",
-                                "size": "sm",
-                                "color": "#c9302c",
-                                "weight": "bold"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][5]['title'].'",
-                                "size": "sm",
-                                "color": "#c9302c",
-                                "weight": "bold"
                               }
                             ]
                           },

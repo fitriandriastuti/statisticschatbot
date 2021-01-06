@@ -293,7 +293,6 @@ Kembali ke menu utama dengan reply "menu"
                             'messages'   => [
                                 [
                                     'type'     => 'carousel',
-                                    'altText'  => 'Carousel Message',
                                     'contents' => json_decode($template)
                                 ]
                             ],

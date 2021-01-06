@@ -117,12 +117,14 @@ Kembali ke menu utama dengan reply "menu"
 //                        ', title: '.$obj['data'][1][0]['title']);
 
                         $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselTemplateBuilder([
-                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][0]['title'], $obj['data'][1][0]['subj'],"https://statisticschatbot.herokuapp.com/statistik-chatbot.png",[
+                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][0]['title'],
+                                $obj['data'][1][0]['subj'],
+                                "https://statisticschatbot.herokuapp.com/statistik-chatbot.png",[
                                 new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('download xlsx',$obj['data'][1][0]['excel']),
                             ]),
-                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][1]['title'], $obj['data'][1][1]['subj'],"https://statisticschatbot.herokuapp.com/statistik-chatbot.png",[
-                                new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('download xlsx',$obj['data'][1][1]['excel']),
-                            ]),
+//                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][1]['title'], $obj['data'][1][1]['subj'],"https://statisticschatbot.herokuapp.com/statistik-chatbot.png",[
+//                                new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('download xlsx',$obj['data'][1][1]['excel']),
+//                            ]),
                         ]);
                         $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('nama template',$carouselTemplateBuilder);
                         $result = $bot->replyMessage($event['replyToken'], $templateMessage);

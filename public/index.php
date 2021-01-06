@@ -152,7 +152,7 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "uri",
-                                  "label": "BPS",
+                                  "label": "Tabel: '.$obj['data'][1][0]['title'].'",
                                   "uri": "https://www.bps.go.id/"
                                 }
                               },
@@ -161,8 +161,8 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "uri",
-                                  "label": "Go",
-                                  "uri": "https://example.com"
+                                  "label": "Tabel: '.$obj['data'][1][1]['title'].'",
+                                  "uri": "https://www.bps.go.id/subject/169/produk-domestik-bruto--pengeluaran-.html#subjekViewTab3"
                                 }
                               },
                               {

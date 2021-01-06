@@ -135,18 +135,11 @@ Kembali ke menu utama dengan reply "menu"
                             "contents": [
                               {
                                   "type": "text",
-                                "text": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                "text": "Berikut ini merupakan list tabel hasil pencarian",
                                 "size": "sm",
                                 "color": "#c9302c",
                                 "weight": "bold"
                               },
-                              {
-                                  "type": "text",
-                                "text": "Subject: '.$obj['data'][1][0]['updt_date'].'",
-                                "size": "sm",
-                                "wrap": true,
-                                "margin": "lg"
-                              }
                             ]
                           },
                           "footer": {
@@ -159,8 +152,8 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "uri",
-                                  "label": "Go",
-                                  "uri": "https://example.com"
+                                  "label": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                  "uri": "'.$obj['data'][1][0]['excel'].'"
                                 }
                               },
                               {

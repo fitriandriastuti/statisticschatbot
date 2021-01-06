@@ -165,6 +165,15 @@ Kembali ke menu utama dengan reply "menu"
                                 }
                               },
                               {
+                                "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "uri",
+                                  "label": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                  "uri": "'.$obj['data'][1][0]['excel'].'"
+                                }
+                              },
+                              {
                                   "type": "button",
                                 "style": "primary",
                                 "action": {

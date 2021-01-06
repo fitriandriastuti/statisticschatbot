@@ -130,12 +130,47 @@ Kembali ke menu utama dengan reply "menu"
                             ]
                           },
                           "body": {
-                                                    "type": "box",
+                            "type": "box",
                             "layout": "vertical",
                             "contents": [
                               {
                                 "type": "text",
                                 "text": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][1]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][2]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][3]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][4]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][5]['title'].'",
                                 "size": "sm",
                                 "color": "#c9302c",
                                 "weight": "bold"
@@ -152,58 +187,10 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "uri",
-                                  "label": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                  "label": "BPS",
                                   "uri": "https://www.bps.go.id/"
                                 }
                               },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "uri",
-                                  "label": "Tabel: '.$obj['data'][1][1]['title'].'",
-                                  "uri": "https://www.bps.go.id/subject/169/produk-domestik-bruto--pengeluaran-.html#subjekViewTab3"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "uri",
-                                  "label": "Go",
-                                  "uri": "'.$obj['data'][1][0]['excel'].'"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "4. Infografis",
-                                  "displayText": "4. Infografis",
-                                  "data": "4. Infografis"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "5. News",
-                                  "displayText": "5. News",
-                                  "data": "5. News"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "6. Press Release",
-                                  "displayText": "6. Press Release",
-                                  "data": "6. Press Release"
-                                }
-                              }
                             ]
                           }
                         }  ';

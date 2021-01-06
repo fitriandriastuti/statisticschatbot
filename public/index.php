@@ -124,17 +124,10 @@ Kembali ke menu utama dengan reply "menu"
                             "contents": [
                               {
                                   "type": "text",
-                                "text": "Statistics Indonesia",
+                                "text": "Hasil Tabel Statistik '.$keyword.'",
                                 "weight": "bold"
                               }
                             ]
-                          },
-                          "hero": {
-                                                    "type": "image",
-                            "url": "https://statisticschatbot.herokuapp.com/statistik-chatbot.png",
-                            "size": "full",
-                            "aspectRatio": "4:3",
-                            "aspectMode": "cover"
                           },
                           "body": {
                                                     "type": "box",
@@ -142,20 +135,14 @@ Kembali ke menu utama dengan reply "menu"
                             "contents": [
                               {
                                   "type": "text",
-                                "text": "Data Statistik yang Dipublikasikan ",
+                                "text": "Tabel: '.$obj['data'][1][0]['title'].'",
                                 "size": "sm",
                                 "color": "#c9302c",
                                 "weight": "bold"
                               },
                               {
                                   "type": "text",
-                                "text": "oleh Badan Pusat Statistik RI",
-                                "size": "sm",
-                                "color": "#c9302c"
-                              },
-                              {
-                                  "type": "text",
-                                "text": "Statistics Chatbot merupakan chatbot teman statistik kamu untuk mencari data statistik yang sudah dipublikasikan resmi oleh Badan Pusat Statistik. Berikut ini fitur yang tersedia pada Statistics Chatbot, silakan balas dengan reply nomor fitur:",
+                                "text": "Subject: '.$obj['data'][1][0]['updt_date'].'",
                                 "size": "sm",
                                 "wrap": true,
                                 "margin": "lg"
@@ -163,7 +150,7 @@ Kembali ke menu utama dengan reply "menu"
                             ]
                           },
                           "footer": {
-                                                    "type": "box",
+                            "type": "box",
                             "layout": "vertical",
                             "spacing": "sm",
                             "contents": [
@@ -172,9 +159,9 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "postback",
-                                  "label": "1. Tabel Statistik",
-                                  "displayText": "1",
-                                  "data": "1"
+                                  "label": "Download Excel",
+                                  "displayText": "Download Excel",
+                                  "data": "'.$obj['data'][1][0]['title'].'"
                                 }
                               },
                               {

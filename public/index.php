@@ -116,8 +116,7 @@ Kembali ke menu utama dengan reply "menu"
 //                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.', hasilnya: '.$obj['data-availability'].', list result: '.$obj['data'][1][0]['table_id'].
 //                        ', title: '.$obj['data'][1][0]['title']);
 
-                        $flexTemplate = json_encode(
-                          '{
+                        $flexTemplate = '{
                           "type": "bubble",
                           "header": {
                                                     "type": "box",
@@ -230,8 +229,7 @@ Kembali ke menu utama dengan reply "menu"
                               }
                             ]
                           }
-                        }  '
-                        );
+                        }  ';
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
                             'messages'   => [

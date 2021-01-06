@@ -134,12 +134,12 @@ Kembali ke menu utama dengan reply "menu"
                             "layout": "vertical",
                             "contents": [
                               {
-                                  "type": "text",
-                                "text": "Berikut ini merupakan list tabel hasil pencarian",
+                                "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][0]['title'].'",
                                 "size": "sm",
                                 "color": "#c9302c",
                                 "weight": "bold"
-                              },
+                              }
                             ]
                           },
                           "footer": {
@@ -152,8 +152,8 @@ Kembali ke menu utama dengan reply "menu"
                                 "style": "primary",
                                 "action": {
                                   "type": "uri",
-                                  "label": "Tabel: '.$obj['data'][1][0]['title'].'",
-                                  "uri": "'.$obj['data'][1][0]['excel'].'"
+                                  "label": "Go",
+                                  "uri": "https://example.com"
                                 }
                               },
                               {

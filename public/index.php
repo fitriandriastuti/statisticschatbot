@@ -143,10 +143,19 @@ Kembali ke menu utama dengan reply "menu"
                             ]
                           },
                           "footer": {
-                                                    "type": "box",
+                            "type": "box",
                             "layout": "vertical",
                             "spacing": "sm",
                             "contents": [
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "uri",
+                                  "label": "BPS",
+                                  "uri": "https://www.bps.go.id/"
+                                }
+                              },
                               {
                                   "type": "button",
                                 "style": "primary",
@@ -160,20 +169,9 @@ Kembali ke menu utama dengan reply "menu"
                                   "type": "button",
                                 "style": "primary",
                                 "action": {
-                                  "type": "postback",
-                                  "label": "2. Publikasi",
-                                  "displayText": "2",
-                                  "data": "2"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "3. Indikator Strategis",
-                                  "displayText": "3",
-                                  "data": "3"
+                                  "type": "uri",
+                                  "label": "Go",
+                                  "uri": "'.$obj['data'][1][0]['excel'].'"
                                 }
                               },
                               {

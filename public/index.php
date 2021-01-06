@@ -292,7 +292,8 @@ Kembali ke menu utama dengan reply "menu"
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
                                 [
-                                    'type'     => 'carousel',
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
                                     'contents' => json_decode($template)
                                 ]
                             ],

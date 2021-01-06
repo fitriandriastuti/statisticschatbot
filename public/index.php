@@ -155,65 +155,21 @@ Kembali ke menu utama dengan reply "menu"
                             "spacing": "sm",
                             "contents": [
                               {
-                                  "type": "button",
+                                "type": "button",
                                 "style": "primary",
                                 "action": {
-                                  "type": "postback",
-                                  "label": "Download Excel",
-                                  "displayText": "Download Excel",
-                                  "data": "'.$obj['data'][1][0]['title'].'"
+                                  "type": "uri",
+                                  "label": "Tabel '.$obj['data'][1][0]['title'].'",
+                                  "uri": "'.$obj['data'][1][0]['title'].'"
+                                },
+                                "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "uri",
+                                  "label": "Tabel '.$obj['data'][1][1]['title'].'",
+                                  "uri": "'.$obj['data'][1][1]['title'].'"
                                 }
                               },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "2. Publikasi",
-                                  "displayText": "2",
-                                  "data": "2"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "3. Indikator Strategis",
-                                  "displayText": "3",
-                                  "data": "3"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "4. Infografis",
-                                  "displayText": "4. Infografis",
-                                  "data": "4. Infografis"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "5. News",
-                                  "displayText": "5. News",
-                                  "data": "5. News"
-                                }
-                              },
-                              {
-                                  "type": "button",
-                                "style": "primary",
-                                "action": {
-                                  "type": "postback",
-                                  "label": "6. Press Release",
-                                  "displayText": "6. Press Release",
-                                  "data": "6. Press Release"
-                                }
-                              }
                             ]
                           }
                         }  ';

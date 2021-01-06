@@ -113,9 +113,20 @@ Kembali ke menu utama dengan reply "menu"
                         $obj = json_decode($json,true);
                         var_dump($obj);
                         print_r($obj);
-//                        echo $obj->data[0]->title;
-                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.', hasilnya: '.$obj['data-availability'].', list result: '.$obj['data'][1][0]['table_id'].
-                        ', title: '.$obj['data'][1][0]['title']);
+//                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.', hasilnya: '.$obj['data-availability'].', list result: '.$obj['data'][1][0]['table_id'].
+//                        ', title: '.$obj['data'][1][0]['title']);
+
+                        $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselTemplateBuilder([
+                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][0]['title'], $obj['data'][1][0]['subj'],"https://i0.wp.com/angryanimebitches.com/wp-content/uploads/2013/03/tamakomarket-overallreview-tamakoanddera.jpg",[
+                                new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('download xlsx',$obj['data'][1][0]['excel']),
+                            ]),
+                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][0]['title'], $obj['data'][1][0]['subj'],"https://i0.wp.com/angryanimebitches.com/wp-content/uploads/2013/03/tamakomarket-overallreview-tamakoanddera.jpg",[
+                                new \LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder('download xlsx',$obj['data'][1][1]['excel']),
+                            ]),
+                        ]);
+                        $templateMessage = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder('nama template',$carouselTemplateBuilder);
+                        $result = $bot->replyMessage($event['replyToken'], $templateMessage);
+
                     }
 
                     else{

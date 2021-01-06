@@ -116,188 +116,188 @@ Kembali ke menu utama dengan reply "menu"
 //                        $result = $bot->replyText($event['replyToken'], 'cari tabel statistik '.$keyword.', hasilnya: '.$obj['data-availability'].', list result: '.$obj['data'][1][0]['table_id'].
 //                        ', title: '.$obj['data'][1][0]['title']);
 
-//                        $flexTemplate = '{
-//                          "type": "bubble",
-//                          "header": {
-//                                                    "type": "box",
-//                            "layout": "vertical",
-//                            "contents": [
-//                              {
-//                                  "type": "text",
-//                                "text": "Hasil Tabel Statistik '.$keyword.'",
-//                                "weight": "bold"
-//                              }
-//                            ]
-//                          },
-//                          "body": {
-//                                                    "type": "box",
-//                            "layout": "vertical",
-//                            "contents": [
-//                              {
-//                                  "type": "text",
-//                                "text": "Tabel: '.$obj['data'][1][0]['title'].'",
-//                                "size": "sm",
-//                                "color": "#c9302c",
-//                                "weight": "bold"
-//                              },
-//                              {
-//                                  "type": "text",
-//                                "text": "Subject: '.$obj['data'][1][0]['updt_date'].'",
-//                                "size": "sm",
-//                                "wrap": true,
-//                                "margin": "lg"
-//                              }
-//                            ]
-//                          },
-//                          "footer": {
-//                                                    "type": "box",
-//                            "layout": "vertical",
-//                            "spacing": "sm",
-//                            "contents": [
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "1. Tabel Statistik",
-//                                  "displayText": "1",
-//                                  "data": "1"
-//                                }
-//                              },
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "2. Publikasi",
-//                                  "displayText": "2",
-//                                  "data": "2"
-//                                }
-//                              },
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "3. Indikator Strategis",
-//                                  "displayText": "3",
-//                                  "data": "3"
-//                                }
-//                              },
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "4. Infografis",
-//                                  "displayText": "4. Infografis",
-//                                  "data": "4. Infografis"
-//                                }
-//                              },
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "5. News",
-//                                  "displayText": "5. News",
-//                                  "data": "5. News"
-//                                }
-//                              },
-//                              {
-//                                  "type": "button",
-//                                "style": "primary",
-//                                "action": {
-//                                  "type": "postback",
-//                                  "label": "6. Press Release",
-//                                  "displayText": "6. Press Release",
-//                                  "data": "6. Press Release"
-//                                }
-//                              }
-//                            ]
-//                          }
-//                        }  ';
-//                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
-//                            'replyToken' => $event['replyToken'],
-//                            'messages'   => [
-//                                [
-//                                    'type'     => 'flex',
-//                                    'altText'  => 'Test Flex Message',
-//                                    'contents' => json_decode($flexTemplate)
-//                                ]
-//                            ],
-//                        ]);
-
-                        $template = '
-                                    {
-                                      "type": "bubble",
-                                      "body": {
-                                        "type": "box",
-                                        "layout": "horizontal",
-                                        "contents": [
-                                          {
-                                            "type": "text",
-                                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                            "wrap": true
-                                          }
-                                        ]
-                                      },
-                                      "footer": {
-                                        "type": "box",
-                                        "layout": "horizontal",
-                                        "contents": [
-                                          {
-                                            "type": "button",
-                                            "style": "primary",
-                                            "action": {
-                                              "type": "uri",
-                                              "label": "Go",
-                                              "uri": "https://example.com"
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "type": "bubble",
-                                      "body": {
-                                        "type": "box",
-                                        "layout": "horizontal",
-                                        "contents": [
-                                          {
-                                            "type": "text",
-                                            "text": "Hello, World!",
-                                            "wrap": true
-                                          }
-                                        ]
-                                      },
-                                      "footer": {
-                                        "type": "box",
-                                        "layout": "horizontal",
-                                        "contents": [
-                                          {
-                                            "type": "button",
-                                            "style": "primary",
-                                            "action": {
-                                              "type": "uri",
-                                              "label": "Go",
-                                              "uri": "https://example.com"
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                        ';
+                        $flexTemplate = '{
+                          "type": "bubble",
+                          "header": {
+                                                    "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                              {
+                                  "type": "text",
+                                "text": "Hasil Tabel Statistik '.$keyword.'",
+                                "weight": "bold"
+                              }
+                            ]
+                          },
+                          "body": {
+                                                    "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                              {
+                                  "type": "text",
+                                "text": "Tabel: '.$obj['data'][1][0]['title'].'",
+                                "size": "sm",
+                                "color": "#c9302c",
+                                "weight": "bold"
+                              },
+                              {
+                                  "type": "text",
+                                "text": "Subject: '.$obj['data'][1][0]['updt_date'].'",
+                                "size": "sm",
+                                "wrap": true,
+                                "margin": "lg"
+                              }
+                            ]
+                          },
+                          "footer": {
+                                                    "type": "box",
+                            "layout": "vertical",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "1. Tabel Statistik",
+                                  "displayText": "1",
+                                  "data": "1"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "2. Publikasi",
+                                  "displayText": "2",
+                                  "data": "2"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "3. Indikator Strategis",
+                                  "displayText": "3",
+                                  "data": "3"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "4. Infografis",
+                                  "displayText": "4. Infografis",
+                                  "data": "4. Infografis"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "5. News",
+                                  "displayText": "5. News",
+                                  "data": "5. News"
+                                }
+                              },
+                              {
+                                  "type": "button",
+                                "style": "primary",
+                                "action": {
+                                  "type": "postback",
+                                  "label": "6. Press Release",
+                                  "displayText": "6. Press Release",
+                                  "data": "6. Press Release"
+                                }
+                              }
+                            ]
+                          }
+                        }  ';
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
                                 [
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
-                                    'contents' => json_decode($template)
+                                    'contents' => json_decode($flexTemplate)
                                 ]
                             ],
                         ]);
+
+//                        $template = '
+//                                    {
+//                                      "type": "bubble",
+//                                      "body": {
+//                                        "type": "box",
+//                                        "layout": "horizontal",
+//                                        "contents": [
+//                                          {
+//                                            "type": "text",
+//                                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//                                            "wrap": true
+//                                          }
+//                                        ]
+//                                      },
+//                                      "footer": {
+//                                        "type": "box",
+//                                        "layout": "horizontal",
+//                                        "contents": [
+//                                          {
+//                                            "type": "button",
+//                                            "style": "primary",
+//                                            "action": {
+//                                              "type": "uri",
+//                                              "label": "Go",
+//                                              "uri": "https://example.com"
+//                                            }
+//                                          }
+//                                        ]
+//                                      }
+//                                    },
+//                                    {
+//                                      "type": "bubble",
+//                                      "body": {
+//                                        "type": "box",
+//                                        "layout": "horizontal",
+//                                        "contents": [
+//                                          {
+//                                            "type": "text",
+//                                            "text": "Hello, World!",
+//                                            "wrap": true
+//                                          }
+//                                        ]
+//                                      },
+//                                      "footer": {
+//                                        "type": "box",
+//                                        "layout": "horizontal",
+//                                        "contents": [
+//                                          {
+//                                            "type": "button",
+//                                            "style": "primary",
+//                                            "action": {
+//                                              "type": "uri",
+//                                              "label": "Go",
+//                                              "uri": "https://example.com"
+//                                            }
+//                                          }
+//                                        ]
+//                                      }
+//                                    }
+//                        ';
+//                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+//                            'replyToken' => $event['replyToken'],
+//                            'messages'   => [
+//                                [
+//                                    'type'     => 'flex',
+//                                    'altText'  => 'Test Flex Message',
+//                                    'contents' => json_decode($template)
+//                                ]
+//                            ],
+//                        ]);
 
 //                        $carouselTemplateBuilder = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselTemplateBuilder([
 //                            new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder($obj['data'][1][0]['title'],

@@ -150,17 +150,18 @@ Kembali ke menu utama dengan reply "menu"
                             ]
                           },
                           "footer": {
-                            "type": "box",
+                                                    "type": "box",
                             "layout": "vertical",
                             "spacing": "sm",
                             "contents": [
                               {
-                                "type": "button",
+                                  "type": "button",
                                 "style": "primary",
                                 "action": {
-                                  "type": "uri",
-                                  "label": "Tabel '.$obj['data'][1][0]['title'].'",
-                                  "uri": "'.$obj['data'][1][0]['title'].'"
+                                  "type": "postback",
+                                  "label": "1. Tabel Statistik",
+                                  "displayText": "1",
+                                  "data": "1"
                                 }
                               },
                               {
